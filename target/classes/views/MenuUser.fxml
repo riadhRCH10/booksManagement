@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inscription.Controllers.MenuUserController">
+    <children>
+        <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="10.0" text="Bienvenue">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+        <Button fx:id="signOutButton" layoutX="669.0" layoutY="15.0" minHeight="45.0" mnemonicParsing="false" onAction="#signOut" prefWidth="45.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/inside-logout-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <TabPane fx:id="TabPane1" layoutX="1.0" layoutY="64.0" prefHeight="511.0" prefWidth="736.0" stylesheets="@login.css" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="FormationHandlerTab" text="Gerer Formation">
+                    <content>
+                        <Pane prefHeight="407.0" prefWidth="600.0">
+                            <children>
+                                <TextField fx:id="TextFieldFormation" layoutX="15.0" layoutY="9.0" prefHeight="45.0" prefWidth="655.0" promptText="Chercher">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                                <Button fx:id="btnRefresh2" layoutX="678.0" layoutY="12.0" mnemonicParsing="false" onAction="#refreshTableFormation" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/refresh%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <TableView fx:id="tableFormation" layoutX="13.0" layoutY="64.0" prefHeight="255.0" prefWidth="700.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_idFormation" prefWidth="95.20001411437988" text="Code formation" />
+                              <TableColumn fx:id="col_Intitule" prefWidth="130.39996337890625" text="Intitulé" />
+                                        <TableColumn fx:id="col_Nombrejour" prefWidth="108.80003356933594" text="Nombre de jour" />
+                                        <TableColumn fx:id="col_annee" minWidth="0.0" prefWidth="0.0" text="Annee" />
+                                        <TableColumn fx:id="col_mois" minWidth="6.4000244140625" prefWidth="91.199951171875" text="mois" />
+                              <TableColumn fx:id="col_Nombre_participant" minWidth="8.0" prefWidth="158.39996337890625" text="Nombre de participant" />
+                              <TableColumn fx:id="col_DomaineFormation" maxWidth="236.39999389648438" minWidth="8.0" prefWidth="115.2000732421875" text="Domaine" />
+                                    </columns>
+                                </TableView>
+                                <Button id="sign-in" fx:id="BtnModifyFormation" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onAction="#Modifier_formation" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Modifier">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnDeleteFormation" layoutX="479.0" layoutY="338.0" mnemonicParsing="false" onAction="#Supprimer_formation" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Supprimer">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnAddFormation" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#Ajouter_formation" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Ajouter">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="195.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/icons8_Add_User_Male_96px.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="610.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/ONE.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="405.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/TWO.png" />
+                                    </image>
+                                </ImageView>
+                        <Button id="sign-in" fx:id="BtnAddParticipation" layoutX="275.0" layoutY="411.0" mnemonicParsing="false" onAction="#Ajouter_participation" stylesheets="@login.css" text="Affecter participant" textFill="#cc2626">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Separator layoutX="302.0" layoutY="399.0" prefHeight="2.0" prefWidth="118.0" />
+
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab fx:id="FormateurHandlerTab" text="Gerer Formateur">
+                    <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="TextfieldFormateur" layoutX="15.0" layoutY="9.0" prefHeight="45.0" prefWidth="655.0" promptText="Chercher">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <Button fx:id="btnRefresh1" layoutX="678.0" layoutY="12.0" mnemonicParsing="false" onAction="#refreshTableFormateur" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/refresh%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <TableView fx:id="tableFormateur" layoutX="13.0" layoutY="64.0" prefHeight="255.0" prefWidth="700.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_IdFormateur" prefWidth="99.20002746582031" text="Code Formateur" />
+                                        <TableColumn fx:id="col_NomFormateur" prefWidth="73.5999755859375" text="Nom" />
+                              <TableColumn fx:id="col_PrenomFormateur" prefWidth="81.60002136230469" text="Prenom" />
+                              <TableColumn fx:id="col_EmailFormateur" prefWidth="162.4000244140625" text="Email" />
+                              <TableColumn fx:id="col_numeroTelephoneFormateur" minWidth="0.0" prefWidth="66.4000244140625" text="Num. Tel" />
+                              <TableColumn fx:id="col_codeorganisme" minWidth="0.0" prefWidth="113.60003662109375" text="Code_organisme" />
+                              <TableColumn fx:id="col_codedomaine" minWidth="0.0" prefWidth="98.4000244140625" text="Code_Domaine" />
+                                    </columns>
+                                </TableView>
+                                <Button id="sign-in" fx:id="BtnDeleteFormateur" layoutX="479.0" layoutY="338.0" mnemonicParsing="false" onAction="#Supprimer_formateur" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Supprimer">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnModiyFormateur" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onAction="#Modifier_formateur" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Modifier">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnAddFormateur" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#Ajouter_Formateur" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Ajouter">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="195.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8_Add_User_Male_96px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="610.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/ONE.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="405.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/TWO.png" />
+                           </image>
+                        </ImageView>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab fx:id="ParticipantHandlerTab" text="Gerer Participant">
+                    <content>
+                        <Pane fx:id="TabPane" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="TextfieldParticipant" layoutX="15.0" layoutY="9.0" prefHeight="45.0" prefWidth="655.0" promptText="Chercher">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <Button fx:id="btnRefresh" layoutX="678.0" layoutY="12.0" mnemonicParsing="false" onAction="#refreshTableParticipant" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/refresh%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <TableView fx:id="tableParticipant" layoutX="13.0" layoutY="64.0" prefHeight="255.0" prefWidth="700.0">
+                                    <columns>
+                              <TableColumn fx:id="col_MatriculePar" prefWidth="108.00003242492676" text="Matricule" />
+                                        <TableColumn fx:id="col_ProfilPar" prefWidth="127.99999237060547" text="Code_profil" />
+                                        <TableColumn fx:id="col_nomPar" minWidth="0.0" prefWidth="116.0" text="Nom" />
+                              <TableColumn fx:id="col_PrenomPar" minWidth="0.0" prefWidth="140.0" text="Prenom" />
+                              <TableColumn fx:id="col_Date_naissancePar" minWidth="0.0" prefWidth="212.79995727539062" text="Date naissance" />
+                                    </columns>
+                                </TableView>
+                                <Button id="sign-in" fx:id="BtnAddParticipant" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#Ajouter_participant" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Ajouter">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnDeleteParticipant" layoutX="479.0" layoutY="338.0" mnemonicParsing="false" onAction="#Supprimer_participant" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Supprimer">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                                <Button id="sign-in" fx:id="BtnModifyParticipant" layoutX="275.0" layoutY="338.0" mnemonicParsing="false" onAction="#Modifier_participant" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Modifier">
+                                    <font>
+                                        <Font name="System Bold Italic" size="17.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="195.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8_Add_User_Male_96px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="610.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/ONE.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="405.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/TWO.png" />
+                           </image>
+                        </ImageView>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+            <Tab fx:id="ParticipationHandlerTab" text="Gerer Participation">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnRefresh3" layoutX="678.0" layoutY="12.0" mnemonicParsing="false" onAction="#refreshTableParticipation" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/refresh%20(2).png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic></Button>
+                        <TextField fx:id="TextfieldParticipation" layoutX="15.0" layoutY="9.0" prefHeight="45.0" prefWidth="655.0" promptText="Chercher">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TableView fx:id="tableParticipation" layoutX="13.0" layoutY="64.0" prefHeight="255.0" prefWidth="700.0">
+                           <columns>
+                              <TableColumn fx:id="col_MatriculeParticipation" prefWidth="108.00003242492676" text="Matricule" />
+                              <TableColumn fx:id="col_nomParticipation" minWidth="0.0" prefWidth="167.20000457763672" text="Nom" />
+                              <TableColumn fx:id="col_code_formation" minWidth="0.0" prefWidth="176.79998779296875" text="code formation" />
+                              <TableColumn fx:id="col_intituleParticipation" minWidth="0.0" prefWidth="245.60003662109375" text="Intitulé" />
+                           </columns>
+                        </TableView>
+                        <Button id="sign-in" fx:id="BtnDeleteParticipation" layoutX="255.0" layoutY="337.0" mnemonicParsing="false" onAction="#Supprimer_participation" prefHeight="38.0" prefWidth="172.0" stylesheets="@login.css" text="Supprimer">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="388.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/ONE.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</Pane>

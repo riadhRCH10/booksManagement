@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="322.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inscription.Controllers.Modify_participantController">
+
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="5.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label maxWidth="1.7976931348623157E308" text="Modifier un participant" GridPane.columnSpan="2147483647">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Separator prefWidth="200.0" GridPane.columnSpan="2147483647">
+            <GridPane.margin>
+                <Insets top="30.0" />
+            </GridPane.margin>
+        </Separator>
+        <Label alignment="BOTTOM_LEFT" text="Nom" GridPane.rowIndex="1">
+            <padding>
+                <Insets top="16.0" />
+            </padding></Label>
+        <Label alignment="BOTTOM_LEFT" text="Prenom" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <padding>
+                <Insets top="16.0" />
+            </padding></Label>
+        <TextField fx:id="NomTextField" style="-fx-background-radius: 0;" GridPane.rowIndex="2" />
+        <TextField fx:id="PrenomTextField" style="-fx-background-radius: 0;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label alignment="BOTTOM_LEFT" text="Date de naissance" GridPane.rowIndex="3">
+            <padding>
+                <Insets top="16.0" />
+            </padding>
+        </Label>
+        <Label alignment="BOTTOM_LEFT" text="Profil" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <padding>
+                <Insets top="16.0" />
+            </padding>
+        </Label>
+        <Button fx:id="BtnModifierParticipant" mnemonicParsing="false" onAction="#Modify_participant" prefHeight="26.0" prefWidth="77.0" styleClass="my-button" text="Modifier" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+        <ChoiceBox fx:id="CodeprofileChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <DatePicker fx:id="DatePicker" GridPane.rowIndex="4" />
+    </children>
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</GridPane>
